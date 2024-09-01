@@ -46,12 +46,26 @@ pot_ent a 0 = 1
 pot_ent a b = a * (pot_ent a (b-1))
 
 --Definir la función factorial de forma recursiva
-
+factorial :: Integer -> Integer
+factorial 0 = 1
+factorial x = x * factorial(x-1)
 
 -- Defiinir el algoritmo de la división.
+division :: Integer -> Integer -> (Integer, Integer)
+division a b
+  | a < b = (0, a)
+  | a >= b = let (x, y) = division (a-b) b
+             in (x+1, y)
 
 
 -- Define la función maximo de forma recursiva que regrese el valor mas grande de una lista de enteros:
+maximo :: [Integer] -> Integer
+maximo [x] = x
+maximo (x:xs) =
+  let y = maximo xs
+  in if x > y
+     then x
+     else y
 
 
 
