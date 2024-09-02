@@ -112,8 +112,15 @@ data ArbolB a = Vacio | Nodo a (ArbolB a) (ArbolB a) deriving (Eq, Show)
 contarNodos :: ArbolB a -> Int
 contarNodos Vacio = 0
 contarNodos (Nodo _ izq der) = 1 + contarNodos izq + contarNodos der
+-- Cuenta el número total de nodos en un árbol binario.
+-- - Si el árbol está vacío (`Vacio`), devuelve `0`.
+-- - Si hay un nodo, cuenta `1` por ese nodo y luego suma el número de nodos en los subárboles izquierdo y derecho.
+
 
 -- Definir una función que calcule la profundidad de un árbol
 profundidad :: ArbolB a -> Int
 profundidad Vacio = 0
 profundidad (Nodo _ izq der) = 1 + max (profundidad izq) (profundidad der)
+-- Calcula la profundidad (altura) del árbol binario.
+-- - Si el árbol está vacío (`Vacio`), la profundidad es `0`.
+-- - Si hay un nodo, suma `1` y luego toma el valor máximo entre la profundidad de los subárboles izquierdo y derecho.
