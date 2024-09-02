@@ -69,10 +69,15 @@ maximo (x:xs) =
 
 
 
--- Pŕactica Arboles
+-- Práctica Árboles
 data ArbolB a = Vacio | Nodo a (ArbolB a) (ArbolB a) deriving (Eq, Show)
 
--- Definir una funcion que calcule el número de nodos del árbol.  ́
-
+-- Definir una funcion que calcule el número de nodos del árbol.
+contarNodos :: ArbolB a -> Int
+contarNodos Vacio = 0
+contarNodos (Nodo _ izq der) = 1 + contarNodos izq + contarNodos der
 
 -- Definir una función que calcule la profundidad de un árbol
+profundidad :: ArbolB a -> Int
+profundidad Vacio = 0
+profundidad (Nodo _ izq der) = 1 + max (profundidad izq) (profundidad der)
