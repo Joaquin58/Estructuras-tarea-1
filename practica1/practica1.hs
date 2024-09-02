@@ -67,11 +67,21 @@ pot_ent a 0 = 1
 pot_ent a b = a * (pot_ent a (b-1))
 
 --Definir la función factorial de forma recursiva
+--En esta función como nuestro caso base definimos el factorial de 0 como 1, puesto que al multiplicar los números por su antecesor 
+--si se multiplicarán por 0 el resultado sería 0.
+--Esta función es recursiva puesto que del número dado se resta 1 y se multiplica por este número hasta llegar al factorial de 0
 factorial :: Integer -> Integer
 factorial 0 = 1
 factorial x = x * factorial(x-1)
 
 -- Defiinir el algoritmo de la división.
+-- Esta función evalua los dos enteros dados en dos casos, uno en donde el Divisor es es mayor y otra donde el dividendo es mayor
+-- Esta genera como resultado una tupla, el primer valor es el cociente y el otro es el residuo.
+-- en el primer caso donde el divisor es mayor al dividendo el cociente es 0 y el residuo es el divisor.
+-- Esta función aplica la recursión en el caso en donde el dividendo es mayor, en este caso se le resta el divisor al dividendo y 
+-- se vuelve a aplicar el resultado de la resta siendo este el dividendo y con el mismo divisor
+-- Se suma 1 al resultado x cada que se aplica este recursión
+-- Así hasta que al efectuar la resta el divisor sea mayor que el dividendo y asi se llega al primer caso en donde acaba la operación.
 division :: Integer -> Integer -> (Integer, Integer)
 division a b
   | a < b = (0, a)
@@ -79,7 +89,12 @@ division a b
              in (x+1, y)
 
 
+
 -- Define la función maximo de forma recursiva que regrese el valor mas grande de una lista de enteros:
+-- Primero definimos el Caso Base en donde la lista es de un elemento, aquí el máximo será este elemento
+-- Luego el caso recursivo en donde de una lista de más elementos de evalua el "tope" x y se aplica la función al resto de la lista
+-- si x es mayor tomara el valor x y en otro caso se toma el maximo del resto de la lista.
+-- Así hasta que se acabe la lista y se hayan evaluado todos los elementos y así se elige el elemento "mayor", el "máximo".
 maximo :: [Integer] -> Integer
 maximo [x] = x
 maximo (x:xs) =
