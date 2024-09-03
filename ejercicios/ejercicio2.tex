@@ -1,0 +1,54 @@
+
+\textbf{2.-}\ Demostrar que para todo natural \textit{n}\ se cumple la igualdad:
+\[
+\sum_{k=0}^{n}k(k+1) = \frac{n(n+1)(n+2)}{3}
+\]
+Demostración por Inducción sobre \textit{n}\
+\newline
+\textbf{1) Caso Base:}\ \textit{n=0}\
+\[
+\sum_{k=0}^{0}k(k+1) = \frac{0(0+1)(0+2)}{3}
+\]
+\[
+0(0+1) = \frac{0(1)(2)}{3}
+\]
+\[
+0(1) = \frac{0}{3}
+\]
+\[
+0 = 0
+\]
+\textbf{2) Hipótesis de Inducción:}\  Se cumple para \textit{n}\
+\[
+\sum_{k=0}^{n}k(k+1) = \frac{n(n+1)(n+2)}{3}
+\]
+\textbf{3) Paso Inductivo:}\  Por demostrar que se cumple para \textit{n+1}\
+\[
+\sum_{k=0}^{n+1}k(k+1) = \frac{(n+1)((n+1)+1)((n+1)+2)}{3}
+\]
+\[
+\sum_{k=0}^{n+1}k(k+1) = \frac{(n+1)(n+2)(n+3)}{3}
+\]
+\[
+\sum_{k=0}^{n}k(k+1) + (n+1)((n+1)+1) = \frac{(n+1)(n+2)(n+3)}{3}
+\]
+\[
+\sum_{k=0}^{n}k(k+1) + (n+1)(n+2) = \frac{(n+1)(n+2)(n+3)}{3}
+\]
+\begin{center}
+\textbf{Por H.I.} $\sum_{k=0}^{n}k(k+1) = \frac{n(n+1)(n+2)}{3}$ 
+\end{center}
+\[
+\frac{n(n+1)(n+2)}{3} + (n+1)((n+2) = \frac{(n+1)(n+2)(n+3)}{3}
+\]
+\[
+\frac{n(n+1)(n+2) + 3(n+1)(n+2)}{3} = \frac{(n+1)(n+2)(n+3)}{3}
+\]
+\[
+\frac{(n+1)(n+2)(n+3)}{3} = \frac{(n+1)(n+2)(n+3)}{3}
+\]
+\newline
+\textbf{Por lo tanto} Demostramos que se cumple para toda \textit{n} que: 
+\[
+\sum_{k=0}^{n}k(k+1) = \frac{n(n+1)(n+2)}{3}
+\]

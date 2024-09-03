@@ -11,8 +11,18 @@
 \usepackage{listings} %Soporte para código
 \usepackage[left=2cm,right=2cm,top=1.8cm,bottom=2.3cm]{geometry}
 % ---definición de los paquetes--
-
-\title{1Tarea 01: Naturales, inducción y recursión}
+\usepackage{fancyhdr}            % Permits header customization. See header section below.
+\fancypagestyle{plain}{
+    \lhead{}
+    \fancyhead[R]{\thepage}
+    \fancyhead[L]{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot{}
+}
+\pagestyle{fancy}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{}
+\title{Tarea 01: Naturales, inducción y recursión}
 \author{Ramírez Mendoza Joaquín Rodrigo\\
 Villalobos Juárez Gontran Eliut\\
 Treviño Puebla Héctor Jerome}
@@ -47,7 +57,7 @@ Treviño Puebla Héctor Jerome}
         \vspace{1cm}
         {\scshape\Large Licenciatura en Ciencias de la Computación \par}
         \vspace{1cm}
-        {\scshape\Huge Tarea 01: Naturales, inducción y recursión  \par}
+        {\scshape\Huge Tarea 01: Naturales, inducción y recursión.  \par}
         \vspace{3cm}
         {\itshape\Large Primer Parcial \par}
         \vfill
@@ -62,6 +72,12 @@ Treviño Puebla Héctor Jerome}
     \maketitle
 
 % Introducir aquí sus capítulos
-% ------
+% ------∨∨∨∨∨∨∨∨∨∨∨∨∨∨∨--------
+\input{ejercicios/ejercicio1.tex}\newpage
+\input{ejercicios/ejercicio2.tex}\newpage
+\input{ejercicios/ejercicio3.tex}\newpage
+\input{ejercicios/ejercicio4.tex}\newpage
+\input{ejercicios/ejercicio5.tex}\newpage
+\input{ejercicios/ejercicio6.tex}\newpage
 
 \end{document}

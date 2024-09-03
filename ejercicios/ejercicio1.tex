@@ -1,0 +1,50 @@
+\textbf{1.-}\ Demostrar por inducción que para todo natural \textit{n}\ se cumple la siguiente igualdad:
+\[
+\sum_{k=0}^{n}2^k = 2^{n+1}-1
+\]
+Demostración por Inducción sobre \textit{n}\\
+\newline
+\textbf{1) Caso Base:}\ \textit{n=0}\
+\[
+\sum_{k=0}^{0}2^k = 2^{0+1}-1 
+\]
+\[
+\ 2^{0}= 2^{1}-1
+\]
+\[
+\ 1 = 1
+\] 
+\textbf{2) Hipótesis de Inducción:}\  Se cumple para \textit{n}\
+\[
+\sum_{k=0}^{n}2^k = 2^{n+1}-1
+\]
+\textbf{3) Paso Inductivo:}\  Por demostrar que se cumple para \textit{n+1}\
+\[
+\sum_{k=0}^{n+1}2^k = 2^{(n+1)+1}-1
+\]
+\[
+\sum_{k=0}^{n+1}2^k = 2^{n+2}-1
+\]
+\[
+\sum_{k=0}^{n}2^k + 2^{k+1} = 2^{n+2}-1
+\]
+\begin{center}
+\textbf{Por H.I.} $\sum_{k=0}^{n}2^k = 2^{n+1}-1$ 
+\end{center}
+\[
+2^{n+1} - 1 +2^{n+1} = 2^{n+2}-1
+\]
+\[
+2^{1}(2^{n+1}) - 1 = 2^{n+2}-1
+\]
+\[
+2^{(n+1)+1} -1 = 2^{n+2}-1
+\]
+\[
+2^{n+2} - 1= 2^{n+2}-1
+\]
+\newline
+\textbf{Por lo tanto} Demostramos que se cumple para toda \textit{n} que: 
+\[
+\sum_{k=0}^{n}2^k = 2^{n+1}-1
+\]

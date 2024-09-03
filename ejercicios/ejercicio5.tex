@@ -1,0 +1,72 @@
+\textbf{5.-}\ Demostrar por inducción la siguiente igualdad:
+\[
+\sum_{k=1}^{n}k^{3} = \left(\sum_{k=1}^{n}k\right)^{2}
+\]
+\newline
+Demostración por Inducción sobre \textit{n}\\
+\newline
+\textbf{1) Caso Base:}\ $n = 1$
+\[
+\sum_{k=1}^{1}k^{3} = \left(\sum_{k=1}^{1}k\right)^{2}
+\]
+\[
+1^{3} = (1)^{2}
+\]
+\[
+1 = 1
+\]
+\textbf{2) Hipótesis de Inducción:}\  La propiedad se cumple para \textit{n}\
+\[
+\sum_{k=1}^{n}k^{3} = \left(\sum_{k=1}^{n}k\right)^{2}
+\]
+\textbf{3) Paso Inductivo:}\  Por demostrar que se cumple para \textit{n+1}\
+\[
+\sum_{k=1}^{n+1}k^{3} = \left(\sum_{k=1}^{n+1}k\right)^{2}
+\]
+\[
+\sum_{k=1}^{n+1}k^{3} = \left(\frac{(n+1)((n+1)+1)}{2}\right)^{2}
+\]
+\[
+\sum_{k=1}^{n+1}k^{3} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\sum_{k=1}^{n}k^{3} + (n+1)^{3}= \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\begin{center}
+\textbf{Por H.I.} $\sum_{k=1}^{n}k^{3} = \left(\sum_{k=1}^{n}k\right)^{2}$
+\end{center}
+\[
+\left(\sum_{k=1}^{n}k\right)^{2} + (n+1)^{3}= \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\begin{center}
+\textbf{Y sabemos que:} $\sum_{k=1}^{n}k= \frac{n(n+1)}{2}$
+\end{center}
+\[
+\left(\frac{n(n+1)}{2}\right)^{2} + (n+1)^{3} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\frac{n^{2}(n+1)^{2}}{2^{2}} + (n+1)^{3} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\frac{n^{2}(n+1)^{2}}{4} + (n+1)^{3} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\frac{{n^{2}(n+1)^{2}} + (4)(n+1)^{3}}{4} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\frac{(n+1)^{2}(n^{2}+4(n+1))}{4} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\frac{(n+1)^{2}(n^{2}+4n+4)}{4} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\frac{(n+1)^{2}(n+2)^{2}}{4} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\[
+\left(\frac{(n+1)(n+2)}{2}\right)^{2} = \left(\frac{(n+1)(n+2)}{2}\right)^{2}
+\]
+\newline
+\textbf{Por lo Tanto} demostramos que se cumple para toda $n$ que:
+\[
+\sum_{k=1}^{n}k^{3} = \left(\sum_{k=1}^{n}k\right)^{2}
+\]

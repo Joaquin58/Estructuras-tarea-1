@@ -1,0 +1,41 @@
+\textbf{6.-}\ Demostrar que para los números de Fibonacci se cumle la siguiente igualdad para toda $n$ natural:
+\[
+F_{n+2} - 1 = \sum_{k=0}^{n}F_{k}
+\]
+\newline
+Demostración por Inducción sobre \textit{n}\\
+\newline
+\textbf{1) Caso Base:}\ $n = 0$
+\begin{align*}
+F_{0+2} - 1 & = \sum_{k=0}^{0}F_{k} \\
+F_{2} - 1 & = F_{0} \\
+1 - 1 & = 0 \\
+0 & = 0 \\
+\end{align*}
+
+\textbf{2) Hipótesis de Inducción:}\  La propiedad se cumple para \textit{n}\
+\[
+F_{n+2} - 1 = \sum_{k=0}^{n}F_{k}
+\]
+\textbf{3) Paso Inductivo:}\  Por demostrar que se cumple para \textit{n+1}\
+\begin{align*}
+F_{(n+1)+2} - 1 = \sum_{k=0}^{n+1}F_{k} \\
+F_{n+3} - 1 = \sum_{k=0}^{n+1}F_{k} \\
+F_{(n+3)-1} + F_{(n+3)-2} - 1 = \sum_{k=0}^{n+1}F_{k} \\
+F_{n+2} + F_{n+1} - 1  = \sum_{k=0}^{n+1}F_{k} \\
+F_{n+2} - 1 +  F_{n+1}  = \sum_{k=0}^{n+1}F_{k} \\
+\end{align*}
+
+\begin{center}
+\textbf{Por H.I.} $F_{n+2} - 1  = \sum_{k=0}^{n}F_{k}$
+\end{center}
+
+\begin{align*}
+\sum_{k=0}^{n}F_{k} +  F_{n+1} = \sum_{k=0}^{n+1}F_{k} \\
+\sum_{k=0}^{n+1}F_{k} = \sum_{k=0}^{n+1}F_{k} \\
+\end{align*}
+
+\textbf{Por lo Tanto demostramos que se cumple para toda $n$ que:}\\ 
+\begin{align*}
+F_{n+2} - 1 = \sum_{k=0}^{n}F_{k} 
+\end{align*}
