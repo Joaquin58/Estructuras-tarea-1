@@ -1,0 +1,152 @@
+\textbf{12.} Sea $T$ un árbol binario con un $l = leafs(T)$ hojas y $h = depth(T) \geq 1$ de profundidad.
+\begin{itemize}
+    \item a) Demostrar que el número de nodos es igual a $2l -1$.
+    \item b) Demostrar que $leafs(T) \leq 2^{h -1}$
+\end{itemize}
+\textbf{Para a):}
+\[
+nn(T) = 2l - 1
+\]
+\textbf{1) Caso Base:} $T = tree(void, c , void)$
+\[
+nn(T) = nn(void) + nn(void) +1
+\]
+\[
+leafs (tree(void, c , void)) = leafs(void) + leafs(void) + 1
+\]
+\[
+nn(void) + nn(void) +1 = 2(leafs(void) + leafs(void) + 1) - 1
+\]
+\[
+0 + 0 +1 = 2(0 + 0 + 1) - 1
+\]
+\[
+1 = 2(1) - 1
+\]
+\[
+1 = 2 - 1
+\]
+\[
+1 = 1
+\]
+\textbf{2) Hipótesis de Inducción:} Suponemos que se cumple para $T_{1}$ y $T_{2}$
+\begin{center}
+    $nn(T_{1}) = 2l_{1} -1$   y     $nn(T_{2}) = 2l_{2} -1$ 
+\end{center}
+
+\textbf{3) Paso Inductivo:} Por Demostrar que se cumple  $T$
+\[
+T = tree(T_{1}, c , T_{2})
+\]
+\[
+nn(T) = 2l_{T} -1
+\]
+\[
+nn(T_{1}) + nn(T_{2}) + 1 = 2l_{T} -1
+\]
+\begin{center}
+    \textbf{Por H.I.:} $nn(T_{1}) = 2l_{1} -1$   y     $nn(T_{2}) = 2l_{2} -1$ 
+\end{center}
+\[
+2l_{1} -1 + 2l_{2} -1 + 1 = 2l_{T} -1
+\]
+\[
+2l_{1} + 2l_{2} -1 -1 + 1 = 2l_{T} -1
+\]
+\[
+2l_{1} + 2l_{2} -1  = 2l_{T} -1
+\]
+\[
+2(l_{1} + 1_{2}) -1  = 2l_{T} -1
+\]
+Sabemos que: \\
+\[
+leafs(T) = leafs(T_{1}) + leafs(T_{2})
+l_{T} = l_{1} + l_{2}
+\]
+Entonces: \\
+\[
+2l_{T} -1 = 2l_{T} -1
+\]
+\textbf{Por lo tanto:} Demostramos que se cumple para todo $T$ que:
+\[
+nn(T) = 2l - 1
+\]
+
+\newpage 
+\textbf{Para b):}
+\[
+leafs(T) \leq 2^{h -1}
+\]
+\textbf{1) Caso Base:} $T = tree(void, c , void)$
+\[
+leafs(T) = leafs(void) + leafs(void) + 1 
+\]
+\[
+depth(tree( void, c, void)) = 1 + max [depth(void), depth(void)]
+\]
+Entonces:
+\[
+leafs(void) + leafs(void) + 1 \leq 1 + max [depth(void), depth(void)]
+\]
+\[
+0 + 0 + 1 \leq 1 + max [0, 0]
+\]
+\[
+ 1 \leq 1 
+\]
+
+\textbf{2) Hipótesis de Inducción:} Suponemos que se cumple para $T_{1}$ y $T_{2}$
+\begin{center}
+    $leafs(T_{1}) \leq 2^{h_{1}-1}$    y     $leafs(T_{2}) \leq 2l^{h_{2}-1}$ 
+\end{center}
+
+\textbf{3) Paso Inductivo:} Por Demostrar que se cumple para  $T$
+\[
+T = tree(T_{1}, c , T_{2})
+\]
+\begin{itemize}
+    \item $h_{T} = depth(T) = 1 + max(depth(T_{1}), depth(T_{2}))$
+    \item $h_{T} = 1 + max(h_{1}, h_{2})$
+\end{itemize}
+\[
+leafs(T) \leq 2^{h_{T}-1}
+\]
+\[
+leafs(T_{1}) + leafs(T_{2}) \leq 2^{h_{T}-1}
+\]
+\begin{center}
+    \textbf{Por H.I.:} $leafs(T_{1}) \leq 2^{h_{1}-1}$  y     $leafs(T_{2}) \leq 2^{h_{2}-1}$ 
+\end{center}
+\[
+leafs(T_{1}) + leafs(T_{2}) \leq 2^{h_{1}-1} + 2^{h_{2}-1}
+\]
+\textbf{Notar que:}
+\begin{itemize}
+    \item $h_{1} \leq max(h_{1}, h_{2})$
+    \item $h_{2} \leq max(h_{1}, h_{2})$
+\end{itemize}
+\[
+2^{h_{1}-1} + 2^{h_{2}-1} \leq 2^{max(h_{1}, h_{2}) -1} + 2^{max(h_{1}, h_{2}) -1} 
+\]
+\[
+2^{max(h_{1}, h_{2}) -1} + 2^{max(h_{1}, h_{2}) -1} = (2^{1})(2^{max(h_{1}, h_{2}) -1})
+\]
+\[
+(2^{1})(2^{max(h_{1}, h_{2}) -1}) = 2^{max(h_{1}, h_{2}) -1 +1})
+\]
+\[
+2^{ 1+ max(h_{1}, h_{2}) -1 }
+\]
+\textbf{Recordemos que:}
+\[
+1 + max(h_{1}, h_{2}) = h_{T}
+\]
+\textbf{Entonces:}
+\[
+2^{ 1+ max(h_{1}, h_{2}) -1 } = 2^{ h_{T} -1 }
+\]
+\textbf{Por lo Tanto:} Demostramos que se cumple para todo árbol $T$ que:
+\[
+leafs(T) \leq 2^{h -1}
+\]
