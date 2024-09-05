@@ -1,9 +1,48 @@
-\textbf{15.} Demuestra que la siguiente funcion recursiva para lista de enteros:
+\textbf{15.} Demuestra que la siguiente funcion recursiva para lista de enteros: \\
 \[
-max(a : []) = a
+max (a:[]) = a
 \]
- 
- %\schema{\schemabox{Contenido a la izquierda de la llave}}{\schemabox{Contenido a la derecha de la llave}}
-%\newcommand\diagram[2]{\schema{\schemabox{#1}}{\schemabox{#2}}}
+\begin{align*}
+max (a:l) = \begin{cases}
+    a & \text{si } a \geq max(l) \\
+    max(l) & \text{si } a < max(l) \\
+\end{cases}
+\end{align*}
+\newline
+Regresa siempre el Valor máximo de la lista.\\
+\newline 
+Por inducción sobre los pasos del algoritmo. \\
+\newline
+\textbf{1) Caso Base:}\\
+\newline
+En 0 pasos $\rightarrow$ max (a:[]) = a \\
+Regresa "a" que es el máximo de la lista que solo contiene a "a" \\
+% [a] \rightarrow (a:[])$ \\
+\newline
+\textbf{2) Hipótesis de Inducción:} \\
+\newline
+Suponemos que el algoritmo sobre cualquier lista $l$ en $n$ pasos regresa $max(l)$, es decir, el valor máximo de la lista. \\
+\newline
 
-%\schema{\schemabox{Contenido a la izquierda de la llave}}{\schemabox{Contenido a la derecha de la llave}}
+\textbf{3) Paso Inductivo:} Por Demostrar que se cumple  para $(a:l)$ que la función $max$ regresa el valor máximo.\\
+Entonces para $n+1$  pasos, se aplica para la lista.
+\[
+max(l') = max(a:l)
+\]
+Debemos evaluar en dos casos:
+\begin{align*}
+max (a:l) = \begin{cases}
+    a & \text{si } a \geq max(l) \\
+    max(l) & \text{si } a < max(l) \\
+\end{cases}
+\end{align*}
+Para el Caso en que $a \geq max(l)$ se toma el valor $a$, Puesto que por \textbf[H.I.] sabemos que de la lista $l$ la función $max(l)$ nos dará el valor máximo, al comparar este con $a$ tendremos el caso en que $a$ es mayor, por lo que podamos tomar $a$ y también en el caso en que $a = max(l)$. Así en este caso tenemos el valor máximo de la lista y la función termina. \\
+\newline
+
+Para el Caso en que $max(l) > a$ también podemos afirmar que por \textbf[H.I.] se cumple tenemos el valor máximo de la lista $max(a:l)$ puesto que $a$ no es mayor al máximo del resto de la lista, luego la función termina. \\ 
+\newline
+Se cumple para ambos casos.
+\newline
+\textbf{Por lo tanto: } Podemos afirmar que el algoritmo $max$ regresa el valor máximo para toda lista $l$.\\
+El algoritmo $max(l)$ es parcialmente completo y correcto.
+
