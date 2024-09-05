@@ -1,0 +1,83 @@
+\textbf{11.-}\ Demostrar las propiedades de la función de reverso de lista
+
+
+\begin{itemize}
+    \item[a)] $\text{rev}(l_1 \sqcup l_2) = \text{rev}(l_2) \sqcup \text{rev}(l_1)$
+    \item[b)] $\text{rev}(\text{rev}(l))$
+\end{itemize}
+
+Inducción estructurada.
+
+\begin{enumerate}
+    \item[1)] Base: $l_1 = []$
+    \[
+    \text{rev}([] \sqcup l_2) = \text{rev}(l_2) = \text{rev}(l_2) \sqcup []
+    \]
+    Así que se cumple que $\text{rev}([] \sqcup l_2) = \text{rev}(l_2) \sqcup \text{rev}([])$.
+
+    \item[2)] Hipótesis de inducción
+
+    Supongamos que se cumple $\text{rev}(l_1 \sqcup l_2) = \text{rev}(l_2) \sqcup \text{rev}(l_1)$.
+
+    \item[3)] Demostración
+
+    Por demostrar que $a : l_1$:
+    \[
+    \text{rev}((a : l_1) \sqcup l_2) = \text{rev}(l_2) \sqcup \text{rev}(a : l_1)
+    \]
+    \[
+    \text{rev}((a : l_1) \sqcup l_2) = \text{rev}(a : (l_1 \sqcup l_2))
+    \]
+    \[
+    \text{rev}(a : (l_1 \sqcup l_2)) = \text{rev}(l_1 \sqcup l_2) \sqcup [a]
+    \]
+    Por hipótesis de inducción:
+    \[
+    \text{rev}(l_1 \sqcup l_2) = \text{rev}(l_2) \cup \text{rev}(l_1)
+    \]
+
+    \[
+    \text{rev}(l_2) \sqcup \text{rev}(l_1) \sqcup [a] = \text{rev}(l_2) \sqcup \text{rev}(a : l_1)
+    \]
+    
+    \[
+    \text{rev}((a : l_1) \sqcup l_2) = \text{rev}(l_2) \sqcup \text{rev}(a : l_1)
+    \]
+
+    \[
+    \text{rev}(\text{rev}(l)) = l
+    \]
+    \item[Base:] $l = []$
+    \[
+    \text{rev}(\text{rev}([])) = []
+    \]
+
+    \item[Hipótesis de inducción]
+
+    Supongamos que la propiedad se cumple para $l$:
+    \[
+    \text{rev}(\text{rev}(l)) = l
+    \]
+
+    \item[Demostración:]
+
+    \[
+    \text{rev}(\text{rev}(a : l)) = \text{rev}(\text{rev}(l) \sqcup [a])
+    \]
+    \[
+    \text{rev}(\text{rev}(l) \sqcup [a]) = \text{rev}([a] \sqcup \text{rev}(l)) = \text{rev}(\text{rev}(l)) \sqcup [a]
+    \]
+    Por hipótesis de inducción:
+    \[
+    \text{rev}(\text{rev}(l)) = l
+    \]
+
+    \[
+    l \sqcup [a] = a : l
+    \]
+
+    \[
+    \text{rev}(\text{rev}(a : l)) = a : l
+    \]
+\end{enumerate}
+

@@ -1,0 +1,132 @@
+\textbf{13.-} Con la gramática de expresiones aritméticas, genera las derivaciones y los árboles de las siguientes expresiones:}
+
+\texttt3 { 
+a) \(2 \cdot x + 3 \cdot y + z\)
+b) \((x + y) \cdot (a + b)\)
+c) \(x + 2 \cdot b + 1\)
+}
+
+
+\subsection*{Derivaciones}
+
+\subsection*{a) \(2 \times x + 3 \times y + z\)}
+
+\textbf{Derivación:}
+
+Iniciamos con \( \text{Tree} \). Descomponemos \( \text{Tree} \) en \( T1 + T2 \). Descomponemos cada término:
+
+\[
+T1 = 2 \times x
+\]
+
+\[
+T2 = 3 \times y + z
+\]
+
+Cada operación se deriva de un subárbol:
+
+\[
+2 \times x \text{ se deriva como } T1 = ( \text{void} \times \text{void} )
+\]
+
+\[
+3 \times y \text{ y } z \text{ se derivan de forma similar.}
+\]
+
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.2\linewidth}
+\centering
+\begin{verbatim}
+       +
+      / \
+     +   T2
+    / \  / \
+   *   * z
+  / \ / \
+ 2  x 3  y
+
+\end{verbatim}
+\end{minipage}
+\end{center}
+\vspace*{\fill}
+
+\subsection*{b) \((x + y) \times (a + b)\)}
+
+\textbf{Derivación:}
+
+Iniciamos con \( \text{Tree} \). Descomponemos \( \text{Tree} \) en \( T1 \times T2 \). Descomponemos cada término:
+
+\[
+T1 = (x + y)
+\]
+
+\[
+T2 = (a + b)
+\]
+
+Cada operación se deriva de un subárbol:
+
+\[
+x + y \text{ se deriva como } T1 = (T1 + T2)
+\]
+
+\[
+a + b \text{ se deriva de forma similar.}
+\]
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.2\linewidth}
+\centering
+\begin{verbatim}
+       *
+      / \
+     +   +
+    / \ / \
+   x  y a  b
+
+\end{verbatim}
+\end{minipage}
+\end{center}
+\vspace*{\fill}
+\subsection*{c) \(x + 2 \times b + 1\)}
+
+\textbf{Derivación:}
+
+Iniciamos con \( \text{Tree} \). Descomponemos \( \text{Tree} \) en \( T1 + T2 \). Descomponemos cada término:
+
+\[
+T1 = x
+\]
+
+\[
+T2 = 2 \times b + 1
+\]
+
+Cada operación se deriva de un subárbol:
+
+\[
+2 \times b \text{ se deriva como } T1 = ( \text{void} \times \text{void} )
+\]
+
+\[
+1 \text{ se deriva como una hoja } T2 = \text{void}.
+\]
+
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.2\linewidth}
+\centering
+\begin{verbatim}
+       +
+      / \
+     +   1
+    / \
+   x   *
+      / \
+     2   b
+\end{verbatim}
+\end{minipage}
+\end{center}
+\vspace*{\fill}
+
