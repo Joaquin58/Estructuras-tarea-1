@@ -1,4 +1,5 @@
-\textbf{14.-}\ Demostrar que para todo natural a,b con b > 0 se cumple que la función:
+\textbf{14.-}\ Demostrar que para todo natural $a,b$ con $b > 0$ se cumple que la función:
+
 \begingroup
 \centering
 \begin{equation}
@@ -9,21 +10,28 @@
     \end{array}
     \right.
 \end{equation}
-donde $f(c,r) = (c+1,r)$ cunple que $div(a,b)=(x,r)$ con $a=x\cdot b+r$
+donde $f(x,r) = (x+1,r)$ cunple que $div(a,b)=(x,r)$ con $a=x\cdot b+r$
 
 \endgroup
 
 \vspace*{1em}
 Inducción sobre los pasos del algoritmo.
 
-\textbf{a) Caso base: }\ En $0$ pasos, tenemos que $a<b$
-$\therefore$ Regresa $x=0$ y $r=a$. $\therefore$ queremos ver que  $a=b\cdot 0 + a = 0+a$ y $a = r < b$
+\textbf{a) Caso base: }\ En $0$ pasos, tenemos que $a<b$ $\therefore$ Regresa $x=0$ y $r=a$. $\therefore$ queremos ver que $a=b\cdot 0 + a = 0+a=a$ y $a = r < b$
+
+\textbf{b) Hip. Ind.: }\ Sup. que el algoritmo en $n$ pasos regresa $c$ y $r$ tal que $a=bx+r$.
+
+\textbf{c) Paso inductivo: }\ P.D. que se cumple para $n+1$ pasos.
+Entonces tenemos que aplicar la función $$f(x_n,r_n)=(x+1,r)=x_{n+1},r_{n+1}$$.
 
 
-\textbf{b) Hip. Ind.: }\ Sup. que 
+Donde 
+\begin{align*}
+    b\cdot c_{n+1}+r_{n+1}=&b(n+1)+r_{n}-b\\
+    =&b(x_n)+b+r_n-b\\
+    =&b(x_n)+r_n\\
+\textbf{Por H.I}=&a
+\end{align*}
 
-
-\textbf{c) Paso inductivo: }\ P.D. que se cumple para:
-
-$$\therefore \forall k,m,n\in \mathbb{N}, k\cdot(m\cdot n)=(k\cdot m)\cdot n$$
+$\therefore \text{el algoritmo termina}\Rightarrow \forall a,b\in \mathbb{N}(b>0)$ se cumple la función
 
