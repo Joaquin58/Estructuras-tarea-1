@@ -1,0 +1,43 @@
+\textbf{7.-}\ Demostrar que la suma es conmutativa; esto es, que para toda $m,n \in N$ se cumple que: $m + n = n + m$ (se debe probar que $s(m + n) = s(m) + n$, es decir, que la definición de suma también se puede hacer por la izquierda).
+
+Demostración por inducción sobre $n$ para $s(m + n) = s(m) + n$
+
+\textbf{a) Caso base: }\ $n=0$
+\begin{align}
+    s(m+0)=&s(m)\\
+          =&s(m)+0
+\end{align}
+
+\textbf{b) Hip. Ind.: }\ Sup. que $s(m + n) = s(m) + n$
+
+\textbf{c) P.D. que se cumple para: }\ $s(m + s(n)) = s(m) + s(n)$
+\begin{align}
+    s(m+(n+1))=&s((m+n)+1)\\
+    =&s(s(m+n))\\
+    \textbf{H.I}=&s(s(m)+n)\\
+    =&s(m+1)+n\\
+    =&(m+1)+1+n\\
+    =&m+1+n+1\\
+    =&s(m)+s(n) \blacksquare
+\end{align}
+
+Por inducción sobre $n$ para $m + n = n + m$
+
+\textbf{a) Caso base: }\ $n=0$
+\begin{align}
+    m+0=&m=\\
+          =0+m
+\end{align}
+
+\textbf{b) Hip. Ind.: }\ Sup. que $m + n = n + m$
+
+\textbf{c) P.D. que se cumple para: }\ $m + s(n) = s(n) + m$
+\begin{align}
+    m+s(n)=&s(n)+m\\
+    m+s(n)=&m+(n+1)\\
+          =&(m+n)+1\\
+          =&s(m+n)\\
+    \textbf{H.I}=&s(n+m)\\
+    \textbf{Por el inciso anterior}=&s(n)+m\blacksquare
+\end{align}
+$$\therefore \forall n,m\in \mathbb{N}, m+n=n+m$$

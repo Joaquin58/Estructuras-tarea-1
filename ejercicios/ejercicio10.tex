@@ -1,0 +1,62 @@
+\textbf{10.-}\ Demostrar que la concatenación de las listas tienen las siguientes propiedades:
+
+
+    \begin{itemize}
+        \setlength{\itemindent}{5em} 
+        \item[a)] Es asociativa, estos es que para toda lista $l_1,l_2 \text{ y }l_3$ se cumple que: $$l_1 \sqcup (l_2 \sqcup l_3) = (l_1 \sqcup l_2) \sqcup l_3$$
+                    
+        
+        \item[b)] Define la funcioń de agregar elementos; esto es:$$(a:l)=[a]\sqcup l$$
+    \end{itemize}
+    a)Demostración estructural sobre la lista  $l$
+    
+    \vspace{1em}
+
+    \textbf{1) Caso Base:}\ $l = [\;]$
+    \begin{gather}
+        [\;]\sqcup(l_2\sqcup l_3)=(l_2\sqcup l_3)\\
+        =([\;]\sqcup l_2)\sqcup l_3
+    \end{gather}
+    
+    \textbf{2) Hipótesis de Inducción:}\ Suponemos que  $$l_1 \sqcup (l_2 \sqcup l_3) = (l_1 \sqcup l_2) \sqcup l_3$$
+
+    \textbf{3) Paso Inductivo:}\ Por demostrar que $(a:l_1) \sqcup (l_2 \sqcup l_3) = ((a:l_1) \sqcup l_2) \sqcup l_3$
+
+    \vspace{1em}
+    \begin{gather}
+    \text{Entonces } (a:l_1) \sqcup (l_2 \sqcup l_3)=(a:(l_1 \sqcup (l_2 \sqcup l_3)))\\
+    \text{Por H.I } l_1 \sqcup (l_2 \sqcup l_3) = (l_1 \sqcup l_2) \sqcup l_3\\
+    =(a:((l_1 \sqcup l_2) \sqcup l_3))\\
+    =(a:(l_1 \sqcup l_2)) \sqcup l_3\\
+    =((a:l_1) \sqcup l_2) \sqcup l_3 \; \blacksquare\\
+    \end{gather}
+
+    \textbf{$\therefore$ demostramos que para toda lista $l_1,l_2 \text{ y }l_3,$ la operación de concatenación $\sqcup$ es conmutativa}
+
+    \vspace{1em}
+    b)Define la funcioń de agregar elementos; esto es:$$(a:l)=[a]\sqcup l$$
+    
+    Sea una lista con un elemento $a$ que queremos combinar a la lista $l$ y supongamos que $l$ es una lista de elementos.
+    Entonces nuestra función $cons(a,l)$, donde $a$ será la cabeza y $l$ la cola de de la lista.
+
+    Ejemplo:
+    \begin{gather*}
+        l=[3,8,2,1] \text{ y } a=1\\
+        cons(a,l)=[1]\sqcup [3,8,2,1] = [1,3,8,2,1]
+    \end{gather*}
+    Nuestra función sería de la forma $cons(a,l)=[a]\sqcup l$
+
+    Demostración por Inducción a la lista:
+
+    \textbf{1) Caso Base:} $$cons(a,[\;]) =[a] =[a]\sqcup [\;]$$.
+
+    \textbf{2) Hipótesis de Inducción: }Suponemos que $$cons(a,l)=[a]\sqcup l$$ concatena correctamente para cualquier lista $l$   
+
+    \textbf{3) Paso Inductivo: }Por demostrar que se cumple para $cons(a,(b:l))=[a]\sqcup (b:l)$
+\vspace*{1em}
+
+\textbf{Por H.I sabemos que la funcioń cons concatena correctamente la cadena, entonces la función regretorna el valor de}$[a]\sqcup l$ 
+
+    \begin{align}
+            \therefore cons(a,(b:l))&=[a]\sqcup (b:l)
+    \end{align}

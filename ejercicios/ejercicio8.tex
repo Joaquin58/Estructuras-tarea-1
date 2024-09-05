@@ -1,0 +1,43 @@
+\textbf{8.-}\ Demostrar que el producto es asociativo: $k\cdot(m\cdot n) = (k\cdot m)\cdot n$, para toda k,m
+naturales y$n \geq 1$ (HINT: se usa la propiedad distributiva).
+
+Por inducción sobre $n$ en la propiedad distributiva.
+\textbf{a) Caso base: }\ $n=0$
+\begin{align*}
+    (k+m)0=0\\
+          =&0+0\\
+          =&k(0)+m(0)
+\end{align*}
+
+\textbf{b) Hip. Ind.: }\ Sup. que $(k+m)n=k\cdot n+m\cdot n$
+
+\textbf{c) P.D. que se cumple para: }\ $(k+m)s(n) = k\cdot s(n) + m\cdot s(n)$
+\begin{align*}
+    (k+m)s(n)=&s(k+m(n+1))\\
+            =&(k+m)n+(k+m)\\
+    \textbf{Por H.I}=&k\cdot n + m\cdot n + (k+m)\\
+     \textbf{Por asociatividad de la suma}=&(k\cdot n + k)+(m\cdot n+m)\\
+      =& k(n+1)+m(n+1)\\
+      =&k\cdot s(n)+m\cdot s(n)\blacksquare
+\end{align*}
+
+Por inducción sobre $n$ para $k\cdot(m\cdot n)=(k\cdot m)\cdot n$
+
+\textbf{a) Caso base: }\ $n=1$
+\begin{align*}
+    k(m\cdot 1)=&k\cdot m\\
+          =&(k\cdot m)1
+\end{align*}
+
+\textbf{b) Hip. Ind.: }\ Sup. que $k\cdot(m\cdot n)=(k\cdot m)\cdot n$
+
+\textbf{c) Paso inductivo: }\ P.D. que se cumple para: $k\cdot(m\cdot s(n))=(k\cdot m)\cdot s(n)$
+\begin{align*}
+    k\cdot(m\cdot s(n))=& k\cdot(m\cdot (n+1))\\
+   \textbf{Por distributición con la suma} =&k\cdot(m\cdot n + m )\\
+   \textbf{Por distributición con la suma} =&k\cdot(m\cdot n) + k\cdot(m)\\
+   \textbf{Por H.I} =&(k\cdot m)\cdot n + k\cdot(m)\\
+                =&(k\cdot m)\cdot (n + 1) \blacksquare
+\end{align*}
+$$\therefore \forall k,m,n\in \mathbb{N}, k\cdot(m\cdot n)=(k\cdot m)\cdot n$$
+

@@ -1,0 +1,29 @@
+\textbf{14.-}\ Demostrar que para todo natural a,b con b > 0 se cumple que la función:
+\begingroup
+\centering
+\begin{equation}
+    div(a,b) = \left\lbrace
+    \begin{array}{ll}
+     (0,a) & \textup{si } a<b\\
+     f(div(a-b,b)) & \textup{si } a\geq b
+    \end{array}
+    \right.
+\end{equation}
+donde $f(c,r) = (c+1,r)$ cunple que $div(a,b)=(x,r)$ con $a=x\cdot b+r$
+
+\endgroup
+
+\vspace*{1em}
+Inducción sobre los pasos del algoritmo.
+
+\textbf{a) Caso base: }\ En $0$ pasos, tenemos que $a<b$
+$\therefore$ Regresa $x=0$ y $r=a$. $\therefore$ queremos ver que  $a=b\cdot 0 + a = 0+a$ y $a = r < b$
+
+
+\textbf{b) Hip. Ind.: }\ Sup. que 
+
+
+\textbf{c) Paso inductivo: }\ P.D. que se cumple para:
+
+$$\therefore \forall k,m,n\in \mathbb{N}, k\cdot(m\cdot n)=(k\cdot m)\cdot n$$
+
